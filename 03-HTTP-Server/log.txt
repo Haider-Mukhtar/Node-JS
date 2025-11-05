@@ -1,0 +1,43 @@
+
+      Date: 1762331344057, 
+      New Request =>
+        Req Location: undefined,
+        Req Host: localhost:8000
+        Req URL: /about
+      ===============================================
+    
+      Date: 1762331344136, 
+      New Request =>
+        Req Location: undefined,
+        Req Host: localhost:8000
+        Req URL: /favicon.ico
+      ===============================================
+    
+      Date: 1762331353922, 
+      New Request =>
+        Req Location: undefined,
+        Req Host: localhost:8000
+        Req URL: /
+      ===============================================
+    
+      Date: 1762331354000, 
+      New Request =>
+        Req Location: undefined,
+        Req Host: localhost:8000
+        Req URL: /favicon.ico
+      ===============================================
+    
+      Date: 1762331364895, 
+      New Request =>
+        Req Location: undefined,
+        Req Host: localhost:8000
+        Req URL: /contact
+      ===============================================
+    
+      Date: 1762331364967, 
+      New Request =>
+        Req Location: undefined,
+        Req Host: localhost:8000
+        Req URL: /favicon.ico
+      ===============================================
+    
