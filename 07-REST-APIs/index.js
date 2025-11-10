@@ -47,7 +47,7 @@ app.get("/api/users/:id",
 // POST /api/users - Create new user
 app.post("/api/users",
   (req, res) => {
-    console.log("POST - Status Pending")
+    res.send("POST - Status Pending")
   }
 );
 
@@ -55,7 +55,7 @@ app.post("/api/users",
 app.patch("/api/user/:id",
   (req, res) => {
     const id = Number(req.params.id);
-    console.log(`PATCH - Status Pending for id:${id}`);
+    res.send(`PATCH - Status Pending for id:${id}`);
   }
 );
 
@@ -63,7 +63,7 @@ app.patch("/api/user/:id",
 app.delete("/api/user/:id",
   (req, res) => {
     const id = Number(req.params.id);
-    console.log(`DELETE - Status Pending for id:${id}`);
+    res.send(`DELETE - Status Pending for id:${id}`);
   }
 );
 
