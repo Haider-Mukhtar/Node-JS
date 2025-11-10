@@ -4,6 +4,11 @@ const users = require("./MOCK_USERS_DATA.json")
 const app = express();
 const PORT = 8000;
 
+// Middleware
+app.use(express.urlencoded({
+  extended: false
+}));
+
 // End Points
 app.get("/",
   (req, res) => {
@@ -39,7 +44,7 @@ app.get("/api/users/:id",
   (req, res) => {
     const id = Number(req.params.id);
     const user = users.find(user => user.id === id);
-    const response = user ? user : `No user with this id: ${id} found.`;
+    const response = user ? user : { success: false, message: "User not found." };
     return res.json(response);
   }
 );
@@ -47,7 +52,11 @@ app.get("/api/users/:id",
 // POST /api/users - Create new user
 app.post("/api/users",
   (req, res) => {
-    res.send("POST - Status Pending")
+    const body = req.body;
+    // Push the data in db
+    console.log(body);
+    console.log("POST - Status Pending")
+    res.json({ success: false, message: "POST - Pending" })
   }
 );
 
@@ -55,7 +64,8 @@ app.post("/api/users",
 app.patch("/api/user/:id",
   (req, res) => {
     const id = Number(req.params.id);
-    res.send(`PATCH - Status Pending for id:${id}`);
+    console.log(`PATCH - Status Pending for id:${id}`);
+    res.json({ success: false, message: "PATCH - Pending" })
   }
 );
 
@@ -63,7 +73,8 @@ app.patch("/api/user/:id",
 app.delete("/api/user/:id",
   (req, res) => {
     const id = Number(req.params.id);
-    res.send(`DELETE - Status Pending for id:${id}`);
+    console.log(`DELETE - Status Pending for id:${id}`);
+    res.json({ success: false, message: "DELETE - Pending" })
   }
 );
 
